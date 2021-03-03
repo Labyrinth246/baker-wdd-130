@@ -1,4 +1,4 @@
 # baker-wdd-130
-Website design for WDD 130. Final project site at BYU-I.
+Owner: Spencer Marlowe Baker
 
-I WILL CHANGE THIS
+Semester: Winter 2021
