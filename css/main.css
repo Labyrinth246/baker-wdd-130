@@ -49,6 +49,9 @@ h1 {
     word-spacing: 10px;
     letter-spacing: 3px;
 }
+a img #logo {
+    position: relative;
+}
 header a {
     color: var(--alt-font-color);
     transition-duration: 0.4s;
