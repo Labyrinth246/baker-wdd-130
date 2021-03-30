@@ -12,7 +12,7 @@
     --dark-alt-primary-color: #BAFF29;
 }
 
-html, body {
+html, main {
     margin: 0;
     padding: 0;
     text-rendering: optimizeLegibility;
@@ -24,14 +24,14 @@ html, body {
   box-sizing: inherit;
 }
 
-body {
+main {
     font-size: 62.5%;
     padding: 2rem 1rem;
     text-align: center;
     font-family: 'PT Sans', sans-serif;
 }
 
-body h1 {
+main h1 {
     margin-bottom: 3rem;
     font-size: 2.5rem;
     text-decoration: underline;
@@ -39,12 +39,12 @@ body h1 {
     font-family: 'Merriweather', serif;
 }
 
-body h2 {
+main h2 {
     font-size: 1.75rem;
     font-family: 'Merriweather', serif;
 }
 
-body button {
+main button {
     font-size: 1.15rem;
     padding: 0.75rem 1.5rem;
     color: var(--primary-color);
@@ -54,11 +54,11 @@ body button {
     font-family: 'PT Sans', sans-serif;
 }
 
-body button:hover {
+main button:hover {
     background-color: var(--background-color);
 }
 
-body > div {
+main > div {
     text-align: left;
     font-size: 1.15rem;
     margin: 1rem auto;
@@ -66,84 +66,84 @@ body > div {
     border-top: 1px solid var(--alt-background-color);
 }
 
-body > div:first-of-type {
+main > div:first-of-type {
     border-top: 0px transparent;
 }
 
-body div .color-wrapper .color {
+main div .color-wrapper .color {
     width: 100%;
     height: 150px;
     margin: 0.75rem 0;
     border: 1px solid var(--primary-color);
 }
 
-body > div:nth-of-type(1), body > div:nth-of-type(2) {
+main > div:nth-of-type(1), main > div:nth-of-type(2) {
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 15px;
 }
 
-body > div:nth-of-type(1) h2, body > div:nth-of-type(2) h2 {
+main > div:nth-of-type(1) h2, main > div:nth-of-type(2) h2 {
     grid-row: 1;
     grid-column: 1/5;
 }
 
-body > div:nth-of-type(1) .color-wrapper:nth-of-type(1) .color {
+main > div:nth-of-type(1) .color-wrapper:nth-of-type(1) .color {
     background-color: var(--background-color);
 }
 
-body > div:nth-of-type(1) .color-wrapper:nth-of-type(2) .color {
+main > div:nth-of-type(1) .color-wrapper:nth-of-type(2) .color {
     background-color: var(--alt-background-color);
 }
 
-body > div:nth-of-type(1) .color-wrapper:nth-of-type(3) .color {
+main > div:nth-of-type(1) .color-wrapper:nth-of-type(3) .color {
     background-color: var(--primary-color);
 }
 
-body > div:nth-of-type(1) .color-wrapper:nth-of-type(4) .color {
+main > div:nth-of-type(1) .color-wrapper:nth-of-type(4) .color {
     background-color: var(--alt-primary-color);
 }
 
-body > div:nth-of-type(2) .color-wrapper:nth-of-type(1) .color {
+main > div:nth-of-type(2) .color-wrapper:nth-of-type(1) .color {
     background-color: var(--dark-background-color);
 }
 
-body > div:nth-of-type(2) .color-wrapper:nth-of-type(2) .color {
+main > div:nth-of-type(2) .color-wrapper:nth-of-type(2) .color {
     background-color: var(--dark-alt-background-color);
 }
 
-body > div:nth-of-type(2) .color-wrapper:nth-of-type(3) .color {
+main > div:nth-of-type(2) .color-wrapper:nth-of-type(3) .color {
     background-color: var(--dark-primary-color);
 }
 
-body > div:nth-of-type(2) .color-wrapper:nth-of-type(4) .color {
+main > div:nth-of-type(2) .color-wrapper:nth-of-type(4) .color {
     background-color: var(--dark-alt-primary-color);
 }
 
-body.dark-mode {
+main.dark-mode {
     background-color: var(--dark-background-color);
     color: var(--dark-primary-color);
 }
 
-body.dark-mode button {
+main.dark-mode button {
     color: var(--dark-primary-color);
     border: 1px solid var(--dark-primary-color);
     background-color: var(--dark-alt-background-color);
 }
 
-body.dark-mode button:hover {
+main.dark-mode button:hover {
     background-color: var(--dark-background-color);
 }
 
-body.dark-mode > div {
+main.dark-mode > div {
     border-top: 1px solid var(--dark-alt-background-color);
 }
 
-body.dark-mode > div:first-of-type {
+main.dark-mode > div:first-of-type {
     border-top: 0px transparent;
 }
 
-body.dark-mode div .color-wrapper .color {
+main.dark-mode div .color-wrapper .color {
     border: 1px solid var(--dark-primary-color);
 }

@@ -97,7 +97,7 @@ button:hover {
 h2 {
     text-decoration: underline;
 }
-main {
+#index {
     font-size: var(--font-size);
     padding: var(--spacing);
     color: var(--font-color);
