@@ -34,16 +34,16 @@ body {
 header {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: auto 1fr 1000px;
+    grid-template-columns: 25px 1fr 1000px;
     font-size: var(--font-size);
     padding: var(--spacing);
     border-bottom: 1px solid var(--border-color);
     color: var(--alt-font-color);
     background-color: var(--alt-background-color);
     font-family: 'Merriweather', serif;
+
 }
 h1 {
-    position: relative;
     text-align: center;
     text-decoration: underline;
     word-spacing: 10px;
@@ -62,7 +62,7 @@ header a:hover {
 
 header nav {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     margin-left: auto;
     
@@ -77,7 +77,7 @@ header nav ul {
 header nav ul li {
     display: inline-block;
     padding: 0px;
-    margin-right: 20px;
+    margin-right: 25px;
 }
 button {
     background-color: var(--background-color);
@@ -94,14 +94,95 @@ button:hover {
     padding: 3px 15px;
     font-size: 18px;
 }
+h2 {
+    text-decoration: underline;
+}
 main {
-    flex: 1;
     font-size: var(--font-size);
     padding: var(--spacing);
     color: var(--font-color);
     background-color: var(--background-color);
+    font-family: 'PT Sans', sans-serif;
+    display: grid;
+    grid-template-columns: 225px 1fr 225px;
+    grid-template-rows: auto;
+    grid-gap: 50px;
+    padding: 30px;
 }
-
+#many img {
+    width: 100%;
+    max-height: 500px;
+    border: 2px solid black;
+}
+#four {
+    border: 2px solid black;
+    height: 90%;
+    grid-row: 1 / 3;
+    grid-column: 1;
+    padding: 30px;
+    text-align: center;
+}
+#four p {
+    text-indent: 0px;
+    line-height: 50px;
+    font-size: 19px;
+    margin-top: 60px;
+}
+#many {
+    grid-column: 2 / 4;
+}
+#one {
+    grid-column: 2 / 4;
+    text-align: center;
+    margin: 60px;
+    padding: 50px;
+}
+#relax {
+    grid-column: 1 / 3;
+}
+#relax img {
+    max-height: 800px;
+    width: 100%;
+}
+#five {
+    border: 2px solid black;
+    height: 90%;
+    grid-column: 3;
+    grid-row: 3 / 5;
+    padding: 30px;
+    text-align: center;
+}
+#five p {
+    text-indent: 0px;
+    line-height: 50px;
+    font-size: 19px;
+    margin-top: 80px;
+}
+#two {
+    grid-column: 1 / 3;
+    grid-row: 4;
+    margin-left: 30px;
+    padding: 50px;
+}
+p {
+    text-indent: 25px;
+    line-height: 50px;
+}
+#p {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+}
+#sun {
+    grid-column: 1;
+}
+#sun img {
+    border: 2px solid black;
+}
+#three {
+    grid-column: 2 / 4;
+    margin-left: 300px;
+}
 footer {
     display: grid;
     grid-template-rows: auto;
