@@ -284,16 +284,66 @@ dl {
     border-bottom: 4px solid var(--alt-font-color);
 }
 select:required:invalid {
-    color:black;
+    color: var(--font-color);
 }
 option[value=""][disabled] {
     display: none;
+    
 }
 option {
     color: black;
 }
-
-
+#get-started-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+#get-started-grid img {
+    width: auto;
+    height: 800px;
+    grid-column: 2/3;
+    grid-row: 1/7;
+}
+#case-style-div {
+    grid-column: 1;
+}
+#color-div {
+    grid-column: 1;
+}
+#phone-type {
+    width: 70%;
+    padding: 8px;
+    border-radius: 5px;
+}
+#phone-type-div {
+    grid-column: 1;
+}
+#case-style {
+    width: 70%;
+    padding: 8px;
+    border-radius: 5px;
+}
+#type-label {
+    grid-column: 1;
+}
+#style-label {
+    grid-column: 1;
+}
+#color-label {
+    grid-column: 1;
+}
+#main-color {
+    grid-column: 1;
+    width: 70%;
+    padding: 8px;
+    border-radius: 5px;
+}
+#highlight-color {
+    width: 70%;
+    padding: 8px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
 
 
 /*Contact-Us Page CSS*/
@@ -584,6 +634,9 @@ body.dark-mode form {
     color: var(--dark-font-color);
     background-color: var(--dark-background-color);
 }
+body.dark-mode select {
+    color: var(--alt-background-color);
+}
 body.dark-mode input {
     color: var(--dark-font-color);
     background-color: var(--dark-background-color);
@@ -603,6 +656,9 @@ body.dark-mode footer {
     border-top: 1px solid var(--dark-border-color);
     color: var(--dark-alt-font-color);
     background-color: var(--dark-alt-background-color);
+}
+body.dark-mode select:required:invalid {
+    color: var(--alt-background-color);
 }
 
 body.dark-mode footer a {
