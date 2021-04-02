@@ -288,10 +288,6 @@ select:required:invalid {
 }
 option[value=""][disabled] {
     display: none;
-    
-}
-option {
-    color: black;
 }
 #get-started-grid {
     display: grid;
@@ -658,7 +654,7 @@ body.dark-mode footer {
     background-color: var(--dark-alt-background-color);
 }
 body.dark-mode select:required:invalid {
-    color: var(--alt-background-color);
+    color: grey;
 }
 
 body.dark-mode footer a {
