@@ -426,9 +426,7 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: var(--font-color);
     color: var(--background-color);
-
 }
-
 
 
 /*Login Page CSS*/
@@ -451,6 +449,12 @@ input[type=submit]:hover {
     padding: 50px;
     margin-bottom: 400px;
 }
+
+
+/*About Us CSS*/
+
+
+
 
 
 /*Footer CSS*/
