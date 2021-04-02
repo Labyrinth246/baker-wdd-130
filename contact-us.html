@@ -55,14 +55,50 @@
         </nav>
     </header>
     <main>
-        <p>
-            Contact Us Page
-        </p>
+        <div>
+            <h1>Contact Us!</h1>
+            <p id=contact-p>
+                If you have any questions or concerns about this website or our company, you have come to the right place. Here you can fill out your own submission form and send it straight to us. Feel free to address any concerns or questions you have and we will get back to you within about a week at most. Please be patient with us if you happen to not get an answer right away, we are working hard to answer your questions and meet your needs. Thank you.
+            </p>
+        </div>
+        <div id="contact-grid">
+            <img src="assets\contact\contact_me3.jpg">
+            <section>
+            <h2>Contact Submission Form</h2>
+            <p>
+                Here is the submission form you will fill out and send to us. Please enter your name, email, the subject and the message you wish to send. Once sent we will get back with you and answer your questions as fast as possible.
+            </p>
+            </section>
+        </div>
     </main>
 
 <script src="js/fake-send.js"></script>
 <form method="GET" action="contact-us.html" id="contact-form">
-    [ADD FORM PARTS HERE]
+  <fieldset>
+    <legend>Contact Us Submission Form</legend>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter Your Full Name">
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" placeholder="Enter You Email Address">
+
+    <label for="subject">Subject:</label>
+    <select type="text" id="subject" name="subject">
+        <option value="" disabled selected>Subject of Question or Concern</option>
+        <option value="design-process">Design Process</option>
+        <option value="navigation">Navigation</option>
+        <option value="submission">Submissions</option>
+        <option value="login">Login</option>
+        <option value="webpage">Webpage Errors</option>
+        <option value="shipping">Shipping</option>
+        <option value="warranty">Warranty</option>
+        <option value="misc">Miscellaneous</option>
+    </select>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="8" cols="50" placeholder="Enter Your Question or Concern Here"></textarea>
+  </fieldset>
+
     <input type="submit" value="Submit Message" id="contact-form-submit">
     <div id="contact-form-message"></div>
 </form>
