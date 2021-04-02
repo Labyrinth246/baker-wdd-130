@@ -62,7 +62,7 @@ function fakeSend() {
         btn.disabled = true;
         var msg  = document.getElementById('contact-form-message');
         msg.classList.add('show');
-        msg.innerHTML = 'Your message was sent successfully! We\'ll be in touch soon.';
+        msg.innerHTML = 'Successfully Submitted. Thank you!';
         // Start a timer to enable the button and erase the message in 7 seconds.
         setTimeout( function() {
             btn.disabled = false;

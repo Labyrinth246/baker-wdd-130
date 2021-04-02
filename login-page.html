@@ -1,12 +1,13 @@
+
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Spencer Baker">
-    <meta name="keywords" content="Index, Home, WDD 130, Web Fundamentals, Project, Site, Page">
-    <meta name="description" content="Home page for the final project site in WDD 130, Web Fundamentals at BYUI.">
-    <title>Home</title>
+    <meta name="keywords" content="Login, WDD 130, Web Fundamentals, Project, Site, Page">
+    <meta name="description" content="Fake login page for the final project site in WDD 130, Web Fundamentals at BYUI.">
+    <title>Login</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -27,8 +28,8 @@
         <nav>
             <ul>
                 <li>
-                    <button><a href="about.html">
-                        About Us
+                    <button><a href="index.html">
+                        Home
                     </a></button>
                 </li>
                 <li>
@@ -46,87 +47,21 @@
                         Contact Us
                     </a></button>
                 </li>
-                <li>
-                    <button><a href="login-page.html">
-                        Login
-                    </a></button>
-                </li>
             </ul>
         </nav>
     </header>
-    <main id="index">
-        <section id="four" class="sidebar">
-            <h3>
-                Need Help?
-            </h3>
-            <p>
-                Feel free to <a href="contact-us.html">contact us</a>! We want to hear from you about your experience with us. If there have been troubles or you are having a hard time on our website, please let us know. 
-            </p>
-            <p>
-                All we need is your email and we should get back to you within a few business days.
-            </p>
+    <main>
+        <script src="js/login-fake.js"></script>
+        <section id="login">
+            <h2>Login To Your Account</h2>
+            <p class="valid">Please wait a moment.</p>
+            <p class="error">Please enter correct Username &amp; password.</p>
+            <form class="loginbox" autocomplete="off">
+                <input placeholder="Username" type="text" id="username"></input>
+                <input placeholder="Password" type="password" id="password"></input>
+        <button id="submit"><a>Login</a></button>
+        </form>
         </section>
-
-
-        <div id="many">
-            <img src="assets\home\too-many-cases.jpg" id="many-cases">
-        </div>
-        
-
-        <section id="one">
-            <h2>
-                Welcome!
-            </h2>
-            <p>
-                Project case is a website that is designed to help you design your own phone case. It is easy to use and can help you find the perfect phone case for you. Whether you would like a phone case built for protection or a phone case built for style, we have you covered! There are many different styles to chose from and you can even pick your own colors as well. 
-            </p>
-            <p>
-                We have worked hard for your benefit because we understand and know the frustration of buying a phone case and not getting what you expected. We understand the feelings of regret when a phone case breaks. We are here to help you find your own case that suits your needs and desires. 
-            </p>
-        </section>
-
-
-        <div id="relax">
-            <img src="assets\home\relaxing-phone-case.jpg" id="relaxing">
-        </div>
-
-        <section id="five" class="sidebar">
-            <h3>
-                Have Questions?
-            </h3>
-            <p>
-                We have an <a href="FAQ.html">FAQ</a> page that you can search through to find the questions you have about our website. If you have questions about us then we also have a page that tells about us and this project. If you have more questions let us know and contact us.
-            </p>
-        </section>
-
-        <section id="two">
-            <h2>
-                Design It Yourself
-            </h2>
-            <p>
-                This website is easy to use and can help you find exactly what you want. There are many designs you can choose from for many different kinds of phones. We are currently working on getting as many phones and cases for your phones into our system. We are one of the few companies that lets you choose and esign your phone case the way that you want it! No more disappointing purchases or broken cases. We have you covered, simply design and purchase a phone case for your needs!
-            </p>
-        </section>
-
-
-        <div id="sun">
-            <img src="assets\home\sunset-phone-case.jpg" id="sunset">
-        </div>
-
-
-        <section id="three">
-            <h2>
-                Get Started
-            </h2>
-            <p>
-                Want to start designing your phone case? All you have to do is click the Get Started page or follow the link below and choose your phone type. Once you have your phone identified, you can start creating your own personal phone case!
-            </p>
-            <p id="p">
-                What are you waiting for! <a href="Get_Started.html">Get Started!</a>
-            </p>
-        </section>
-        
-        
     </main>
     <footer>
         <div id="legal">

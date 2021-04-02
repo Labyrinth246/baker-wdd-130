@@ -6,13 +6,15 @@
     <meta name="author" content="Spencer Baker">
     <meta name="keywords" content="Get Started, WDD 130, Web Fundamentals, Project, Site, Page">
     <meta name="description" content="Get Started page for the final project site in WDD 130, Web Fundamentals at BYUI.">
-    <title>Get_Started</title>
+    <title>Get Started</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
     <script src="js/dark-mode.js"></script>
+    <script src="js\jquery-3.6.0.min.js"></script>
+    
 </head>
 <body>
     <header>
@@ -46,14 +48,167 @@
                         Contact Us
                     </a></button>
                 </li>
+                <li>
+                    <button><a href="login-page.html">
+                        Login
+                    </a></button>
+                </li>
             </ul>
         </nav>
     </header>
     <main>
+        <div id="getstarted">
+        <h1>Getting Started!</h1>
         <p>
-            Get Started Page
+            Welcome to the Get Started page! Here is where you will be designing your own phone case. Don't worry, the design process for getting your own phone case is very easy. We have strived to make it as easy as possible for you to design your own personal case for your own personal phone!
         </p>
+        <P>
+            First things first, you choose your phone type. Currently we have about 8 phone types to choose from but we are constantly striving to include more for your needs. After your phone type has been chosen, there are two case styles you can choose from. Protective Style and Creative Style. Each case style strives to protect your phone and make it look good but the Protective case has less customizibility and the Creative case has more customizibility. The Protective case has more protection for your phone but less customizibility. After you have chosen your case style, you can choose the color you want! There is a main color and a highlights color to compliment the main color. You can switch between colors to find ones you like best. Once you have a color you like, you can either save your design with your account or submit the case design and purchase it!
+        </P>
+        </div>
     </main>
+<script src="js/fake-send.js"></script>
+        <form method="GET" action="Get_Started.html" id="contact-form">
+
+                    <label for="phone-type">1. Choose Your Phone Type</label>
+                    <select name="phone-type" id="phone-type" required>
+                        <option value="" disabled selected>Click To Choose</option>
+                      <optgroup label="Samsung Phones">
+                        <option value="samsung galaxy s21">Samsung Galaxy S21</option>
+                        <option value="samsung galaxy s21 ultra">Samsung Galaxy S21 Ultra</option>
+                      </optgroup>
+                      <optgroup label="Apple Phones">
+                        <option value="iphone 12">iPhone 12</option>
+                        <option value="iphone 12 pro">iPhone 12 Pro</option>
+                      </optgroup>
+                      <optgroup label="OnePlus Phones">
+                        <option value="oneplus 8">OnePlus 8</option>
+                        <option value="oneplus 8 pro">OnePlus 8 Pro</option>
+                      </optgroup>
+                      <optgroup label="Google Phones">
+                        <option value="google pixel 5">Google Pixel 5</option>
+                      </optgroup>
+                      <optgroup label="Motorola Phones">
+                        <option value="motorola one 5g">Motorola One 5G</option>
+                      </optgroup>
+                    </select>
+
+                    <label for="case-style">2. Case Style</label>
+                    <select name="case-style" id="case-style" required>
+                        <option value="" disabled selected>Click To Choose</option>
+                        <option value="protective">Protective Style</option>
+                        <option value="creative">Creative Style</option>
+                    </select>
+
+                    <label for="case-color">3. Now For The Color!</label>
+                    <select name="main-color" id="main-color" onchange="setImage(this);" required>
+                        <option value="" disabled selected>Main Color</option>
+                        <option value="assets\get started\Creative Cases\Black\black-black.png">Black</option>
+                        <option value="assets\get started\Creative Cases\Navy Blue\navy blue-navy blue.png">Navy Blue</option>
+                        <option value="assets\get started\Creative Cases\Red\red-red.png">Red</option>
+                        <option value="assets\get started\Creative Cases\Fire Red\fire red-fire red.png">Fire Red</option>
+                        <option value="assets\get started\Creative Cases\Grey\grey-grey.png">Grey</option>
+                        <option value="assets\get started\Creative Cases\Cool Grey\cool grey - cool grey.png">Cool Grey</option>
+                        <option value="assets\get started\Creative Cases\Brown\brown-brown.png">Brown</option>
+                        <option value="assets\get started\Creative Cases\Teal\teal-teal.png">Teal</option>
+                        <option value="assets\get started\Creative Cases\Pink\pink-pink.png">Pink</option>
+                        <option value="assets\get started\Creative Cases\Green\green-green.png">Green</option>
+                    </select>
+                    <select name="highlight-color" id="highlight-color" onchange="setImage(this);" required>
+                        <option value="" disabled selected>Highlights</option>
+                    </select><br />
+
+                    <img src="" name="image-swap" />
+
+                   <!-- <script>
+// Map your choices to your option value
+var lookup = {
+   'assets\get started\Creative Cases\Black\black-black.png': ['Black', 'Navy Blue', 'Red', 'Fire Red', 'Grey', 'Cool Grey', 'Brown', 'Teal', 'Pink', 'Green'],
+   'assets\get started\Creative Cases\Navy Blue\navy blue-navy blue.png': ['Black', 'Navy Blue', 'Red', 'Fire Red', 'Grey', 'Cool Grey', 'Brown', 'Teal', 'Pink', 'Green'],
+   'assets\get started\Creative Cases\Red\red-red.png': ['Black', 'Navy Blue', 'Red', 'Fire Red', 'Grey', 'Cool Grey', 'Brown', 'Teal', 'Pink', 'Green'],
+   'assets\get started\Creative Cases\Fire Red\fire red-fire red.png': ['Black', 'Navy Blue', 'Red', 'Fire Red', 'Grey', 'Cool Grey', 'Brown', 'Teal', 'Pink', 'Green'],
+   'assets\get started\Creative Cases\Grey\grey-grey.png': ['Black', 'Navy Blue', 'Red', 'Fire Red', 'Grey', 'Cool Grey', 'Brown', 'Teal', 'Pink', 'Green'],
+   'assets\get started\Creative Cases\Cool Grey\cool grey - cool grey.png': ['Black', 'Navy Blue', 'Red', 'Fire Red', 'Grey', 'Cool Grey', 'Brown', 'Teal', 'Pink', 'Green'],
+   'assets\get started\Creative Cases\Brown\brown-brown.png': ['Black', 'Navy Blue', 'Red', 'Fire Red', 'Grey', 'Cool Grey', 'Brown', 'Teal', 'Pink', 'Green'],
+   'assets\get started\Creative Cases\Teal\teal-teal.png': ['Black', 'Navy Blue', 'Red', 'Fire Red', 'Grey', 'Cool Grey', 'Brown', 'Teal', 'Pink', 'Green'],
+   'assets\get started\Creative Cases\Pink\pink-pink.png': ['Black', 'Navy Blue', 'Red', 'Fire Red', 'Grey', 'Cool Grey', 'Brown', 'Teal', 'Pink', 'Green'],
+   'assets\get started\Creative Cases\Green\green-green.png': [''],
+};
+
+// When an option is changed, search the above for matching choices
+$('#main-color').on('change', function() {
+   // Set selected option as variable
+   var selectValue = $(this).val();
+
+   // Empty the target field
+   $('#highlight-color').empty();
+   
+   // For each chocie in the selected option
+   for (i = 0; i < lookup[selectValue].length; i++) {
+      // Output choice in the target field
+      $('#highlight-color').append("<option value='" + lookup[selectValue][i] + "'>" + lookup[selectValue][i] + "</option>");
+   }
+});
+                    </script>-->
+
+                    <!--<script language="jquery-3">
+                    $(document).ready(function() {
+
+                        $("#main-color").change(function() {
+                            var val = $(this).val();
+                            if (val == "assets\get started\Creative Cases\Black\black-black.png") {
+                                $("#highligh-color").html("<option value='assets\get started\Creative Cases\Black\black-black.png'>Black</option>  <option value='assets\get started\Creative Cases\Black\black-navy blue.png'>Navy Blue</option>  <option value='assets\get started\Creative Cases\Black\black-red.png'>Red</option>  <option value='assets\get started\Creative Cases\Black\black-fire red.png'>Fire Red</option>  <option value='assets\get started\Creative Cases\Black\black-grey.png'>Grey</option>  <option value='assets\get started\Creative Cases\Black\black-cool grey.png'>Cool Grey</option>  <option value='assets\get started\Creative Cases\Black\black-brown.png'>Brown</option>  <option value='assets\get started\Creative Cases\Black\black-teal.png'>Teal</option>  <option value='assets\get started\Creative Cases\Black\black-pink.png'>Pink</option>  <option value='assets\get started\Creative Cases\Black\black-green.png'>Green</option>");
+                            } else if (val == "assets\get started\Creative Cases\Navy Blue\navy blue-navy blue.png") {
+                                $("#highlight-color").html("<option value='assets\get started\Creative Cases\Navy Blue\navy blue-black.png'>Black</option>  <option value='assets\get started\Creative Cases\Navy Blue\navy blue-navy blue.png'>Navy Blue</option>  <option value='assets\get started\Creative Cases\Navy Blue\navy blue-red.png'>Red</option>  <option value='assets\get started\Creative Cases\Navy Blue\navy blue-fire red.png'>Fire Red</option>  <option value='assets\get started\Creative Cases\Navy Blue\navy blue-grey.png'>Grey</option>  <option value='assets\get started\Creative Cases\Navy Blue\navy blue-cool grey.png'>Cool Grey</option>  <option value='assets\get started\Creative Cases\Navy Blue\navy blue-brown.png'>Brown</option>  <option value='assets\get started\Creative Cases\Navy Blue\navy blue-teal.png'>Teal</option>  <option value='assets\get started\Creative Cases\Navy Blue\navy blue-pink.png'>Pink</option>  <option value='assets\get started\Creative Cases\Navy Blue\navy blue-green.png'>Green</option>");
+
+                            } else if (val == "assets\get started\Creative Cases\Red\red-red.png") {
+                                $("#highlight-color").html("<option value='assets\get started\Creative Cases\Red\red-black.png'>Black</option>  <option value='assets\get started\Creative Cases\Red\red-navy blue.png'>Navy Blue</option>  <option value='assets\get started\Creative Cases\Red\red-red.png'>Red</option>  <option value='assets\get started\Creative Cases\Red\red-fire red.png'>Fire Red</option>  <option value='assets\get started\Creative Cases\Red\red-grey.png'>Grey</option>  <option value='assets\get started\Creative Cases\Red\red-cool grey.png'>Cool Grey</option>  <option value='assets\get started\Creative Cases\Red\red-brown.png'>Brown</option>  <option value='assets\get started\Creative Cases\Red\red-teal.png'>Teal</option>  <option value='assets\get started\Creative Cases\Red\red-pink.png'>Pink</option>  <option value='assets\get started\Creative Cases\Red\red-green.png'>Green</option>");
+
+
+                            } else if (val == "assets\get started\Creative Cases\Fire Red\fire red-fire red.png") {
+                                $("#highlight-color").html("<option value='assets\get started\Creative Cases\Fire Red\fire red-black.png'>Black</option>  <option value='assets\get started\Creative Cases\Fire Red\fire red-navy blue.png'>Navy Blue</option>  <option value='assets\get started\Creative Cases\Fire Red\fire red-red.png'>Red</option>  <option value='assets\get started\Creative Cases\Fire Red\fire red-fire red.png'>Fire Red</option>  <option value='assets\get started\Creative Cases\Fire Red\fire red-grey.png'>Grey</option>  <option value='assets\get started\Creative Cases\Fire Red\fire red-cool grey.png'>Cool Grey</option>  <option value='assets\get started\Creative Cases\Fire Red\fire red-brown.png'>Brown</option>  <option value='assets\get started\Creative Cases\Fire Red\fire red-teal.png'>Teal</option>  <option value='assets\get started\Creative Cases\Fire Red\fire red-pink.png'>Pink</option>  <option value='assets\get started\Creative Cases\Fire Red\fire red-green.png'>Green</option>");
+
+
+                            } else if (val == "assets\get started\Creative Cases\Grey\grey-grey.png") {
+                                $("#highlight-color").html("<option value='assets\get started\Creative Cases\Grey\grey-black.png'>Black</option>  <option value='C:\Users\spenc\OneDrive\Documents\WDD\baker-wdd-130\assets\get started\Creative Cases\Grey\grey-navy blue.png'>Navy Blue</option>  <option value='assets\get started\Creative Cases\Grey\grey-red.png'>Red</option>  <option value='assets\get started\Creative Cases\Grey\grey-fire red.png'>Fire Red</option>  <option value='assets\get started\Creative Cases\Grey\grey-grey.png'>Grey</option>  <option value='assets\get started\Creative Cases\Grey\grey-cool grey.png'>Cool Grey</option>  <option value='assets\get started\Creative Cases\Grey\grey-brown.png'>Brown</option>  <option value='assets\get started\Creative Cases\Grey\grey-teal.png'>Teal</option>  <option value='assets\get started\Creative Cases\Grey\grey-pink.png'>Pink</option>  <option value='assets\get started\Creative Cases\Grey\grey-green.png'>Green</option>");
+
+
+                            } else if (val == "assets\get started\Creative Cases\Cool Grey\cool grey - cool grey.png") {
+                                $("#highlight-color").html("<option value='assets\get started\Creative Cases\Cool Grey\cool grey-black.png'>Black</option>  <option value='assets\get started\Creative Cases\Cool Grey\cool grey-navy blue.png'>Navy Blue</option>  <option value='assets\get started\Creative Cases\Cool Grey\cool grey-red.png'>Red</option>  <option value='assets\get started\Creative Cases\Cool Grey\cool grey-fire red.png'>Fire Red</option>  <option value='assets\get started\Creative Cases\Cool Grey\cool grey-grey.png'>Grey</option>  <option value='assets\get started\Creative Cases\Cool Grey\cool grey - cool grey.png'>Cool Grey</option>  <option value='assets\get started\Creative Cases\Cool Grey\cool grey-brown.png'>Brown</option>  <option value='assets\get started\Creative Cases\Cool Grey\cool grey-teal.png'>Teal</option>  <option value='assets\get started\Creative Cases\Cool Grey\cool grey-pink.png'>Pink</option>  <option value='assets\get started\Creative Cases\Cool Grey\cool grey-green.png'>Green</option>");
+
+
+                            } else if (val == "assets\get started\Creative Cases\Brown\brown-brown.png") {
+                                $("#highlight-color").html("<option value='assets\get started\Creative Cases\Brown\brown-black.png'>Black</option>  <option value='assets\get started\Creative Cases\Brown\brown-navy blue.png'>Navy Blue</option>  <option value='assets\get started\Creative Cases\Brown\brown-red.png'>Red</option>  <option value='assets\get started\Creative Cases\Brown\brown-fire red.png'>Fire Red</option>  <option value='assets\get started\Creative Cases\Brown\brown-grey.png'>Grey</option>  <option value='assets\get started\Creative Cases\Brown\brown-cool grey.png'>Cool Grey</option>  <option value='assets\get started\Creative Cases\Brown\brown-brown.png'>Brown</option>  <option value='assets\get started\Creative Cases\Brown\brown-teal.png'>Teal</option>  <option value='assets\get started\Creative Cases\Brown\brown-pink.png'>Pink</option>  <option value='assets\get started\Creative Cases\Brown\brown-green.png'>Green</option>");
+
+
+                            } else if (val == "assets\get started\Creative Cases\Teal\teal-teal.png") {
+                                $("#highlight-color").html("<option value='assets\get started\Creative Cases\Teal\teal-black.png'>Black</option>  <option value='assets\get started\Creative Cases\Teal\teal-navy blue.png'>Navy Blue</option>  <option value='assets\get started\Creative Cases\Teal\teal-red.png'>Red</option>  <option value='assets\get started\Creative Cases\Teal\teal-fire red.png'>Fire Red</option>  <option value='assets\get started\Creative Cases\Teal\teal-grey.png'>Grey</option>  <option value='assets\get started\Creative Cases\Teal\teal-cool grey.png'>Cool Grey</option>  <option value='assets\get started\Creative Cases\Teal\teal-broen.png'>Brown</option>  <option value='assets\get started\Creative Cases\Teal\teal-teal.png'>Teal</option>  <option value='assets\get started\Creative Cases\Teal\teal-pink.png'>Pink</option>  <option value='assets\get started\Creative Cases\Teal\teal-greean.png'>Green</option>");
+
+
+                            } else if (val == "assets\get started\Creative Cases\Pink\pink-pink.png") {
+                                $("#highlight-color").html("<option value='assets\get started\Creative Cases\Pink\pink-black.png'>Black</option>  <option value='assets\get started\Creative Cases\Pink\pink-navy blue.png'>Navy Blue</option>  <option value='assets\get started\Creative Cases\Pink\pink-red.png'>Red</option>  <option value='assets\get started\Creative Cases\Pink\pink-fire red.png'>Fire Red</option>  <option value='assets\get started\Creative Cases\Pink\pink-grey.png'>Grey</option>  <option value='assets\get started\Creative Cases\Pink\pink-cool grey.png'>Cool Grey</option>  <option value='assets\get started\Creative Cases\Pink\pink-brown.png'>Brown</option>  <option value='assets\get started\Creative Cases\Pink\pink-teal.png'>Teal</option>  <option value='assets\get started\Creative Cases\Pink\pink-pink.png'>Pink</option>  <option value='assets\get started\Creative Cases\Pink\pink-green.png'>Green</option>");
+
+
+                            } else if (val == "assets\get started\Creative Cases\Green\green-green.png") {
+                                $("#highlight-color").html("<option value='assets\get started\Creative Cases\Green\green-black.png'>Black</option>  <option value='assets\get started\Creative Cases\Green\green-navy blue.png'>Navy Blue</option>  <option value='assets\get started\Creative Cases\Green\green-red.png'>Red</option>  <option value='assets\get started\Creative Cases\Green\green-fire red.png'>Fire Red</option>  <option value='assets\get started\Creative Cases\Green\green-grey.png'>Grey</option>  <option value='assets\get started\Creative Cases\Green\green-cool grey.png'>Cool Grey</option>  <option value='assets\get started\Creative Cases\Green\green-brown.png'>Brown</option>  <option value='assets\get started\Creative Cases\Green\green.teal.png'>Teal</option>  <option value='assets\get started\Creative Cases\Green\green-pink.png'>Pink</option>  <option value='assets\get started\Creative Cases\Green\green-green.png'>Green</option>");
+
+                            }
+                        });
+
+
+                        });
+                    </script>-->
+                  <script>
+                    function setImage(select){
+                      var image = document.getElementsByName("image-swap")[0];
+                      image.src = select.options[select.selectedIndex].value;
+                    }
+                    </script>
+
+                    
+            <input type="submit" value="Submit" id="contact-form-submit">
+            <div id="contact-form-message"></div>
+        </form>
     <footer>
         <div id="legal">
             &copy; 2021 Project Case. All Rights Reserved.
