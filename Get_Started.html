@@ -67,10 +67,13 @@
         </P>
         </div>
     </main>
+
 <script src="js/fake-send.js"></script>
         <form method="GET" action="Get_Started.html" id="contact-form">
 
-                    <label for="phone-type">1. Choose Your Phone Type</label>
+            <div id="get-started-grid">
+                    <label for="phone-type" id="type-label">1. Choose Your Phone Type</label>
+                <div id="phone-type-div">
                     <select name="phone-type" id="phone-type" required>
                         <option value="" disabled selected>Click To Choose</option>
                       <optgroup label="Samsung Phones">
@@ -92,15 +95,19 @@
                         <option value="motorola one 5g">Motorola One 5G</option>
                       </optgroup>
                     </select>
+                </div>
 
-                    <label for="case-style">2. Case Style</label>
+                    <label for="case-style" id="style-label">2. Case Style</label>
+                <div id="case-style-div">
                     <select name="case-style" id="case-style" required>
                         <option value="" disabled selected>Click To Choose</option>
                         <option value="protective">Protective Style</option>
                         <option value="creative">Creative Style</option>
                     </select>
+                </div>
 
-                    <label for="case-color">3. Now For The Color!</label>
+                    <label for="case-color" id="color-label">3. Now For The Color!</label>
+                <div id="color-div">
                     <select name="main-color" id="main-color" onchange="setImage(this);" required>
                         <option value="" disabled selected>Main Color</option>
                         <option value="assets\get started\Creative Cases\Black\black-black.png">Black</option>
@@ -116,9 +123,10 @@
                     </select>
                     <select name="highlight-color" id="highlight-color" onchange="setImage(this);" required>
                         <option value="" disabled selected>Highlights</option>
-                    </select><br />
+                    </select>
+                </div>
 
-                    <img src="" name="image-swap" />
+                    <img src="assets\get started\phone-case-template.png" name="image-swap" />
 
                    <!-- <script>
 // Map your choices to your option value
@@ -205,10 +213,12 @@ $('#main-color').on('change', function() {
                     }
                     </script>
 
-                    
+            </div> 
             <input type="submit" value="Submit" id="contact-form-submit">
             <div id="contact-form-message"></div>
+        
         </form>
+    
     <footer>
         <div id="legal">
             &copy; 2021 Project Case. All Rights Reserved.
