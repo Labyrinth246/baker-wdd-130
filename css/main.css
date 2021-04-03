@@ -432,6 +432,29 @@ input[type=submit]:hover {
 /*Login Page CSS*/
 
 
+.loginbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+}
+#submit {
+    grid-column: 2;
+    width: 150px;
+    margin-left: 115px;
+}
+#username {
+    padding: 2px 8px;
+    width: 350px;
+    border-radius: 5px;
+    grid-column: 2;
+    background-color: white;
+}
+#password {
+    padding: 2px 8px;
+    width: 350px;
+    border-radius: 5px;
+    grid-column: 2;
+}
 .error {
     display: none;
 }
@@ -499,6 +522,12 @@ table, tr, th, td {
 .card:hover {
     box-shadow: 0 32px 64px 8px rgba(0,0,0,0.2);
     border: 2px solid black;
+}
+.card img {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
 }
 th, td {
     padding: 20px;
